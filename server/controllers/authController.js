@@ -3,14 +3,12 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import Subscriber from '../models/Subscriber.js';
 import User from '../models/User.js';
-
 export const signup = async (req, res) => {
   const { firstName, lastName, email, password, passwordConfirm } = req.body;
 
   if (password !== passwordConfirm) {
     return res.status(400).json({ message: "Passwords do not match" });
   }
-
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
