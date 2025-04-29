@@ -67,6 +67,8 @@
 //     description: "Discover the wonders of Peru, from the ancient ruins of Machu Picchu to the vibrant culture of Cusco and Lima.",
 //     featured: false,
 //   },
+
+
 //   {
 //     id: 6,
 //     name: 'Vietnam & Cambodia Explorer',
